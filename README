@@ -1,0 +1,46 @@
+***************************************
+PDF Automation By APACHE PDFBox library 
+***************************************
+
+JARS Needed
+1)selenium 
+
+ <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>2.47.1</version>
+    </dependency> 
+2)pdfbox
+
+ <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>2.0.11</version>
+</dependency>
+
+Apache PDFBox is an open-source Java library that supports the development and conversion of PDF documents.
+PDFBox to develop Java programs that can create, convert, and manipulate PDF documents.
+
+Features of PDFBox
+Following are the notable features of PDFBox −
+
+Extract Text − Using PDFBox, you can extract Unicode text from PDF files.
+
+Split & Merge − Using PDFBox, you can divide a single PDF file into multiple files, and merge them back as a single file.
+
+Fill Forms − Using PDFBox, you can fill the form data in a document.
+
+Print − Using PDFBox, you can print a PDF file using the standard Java printing API.
+
+Save as Image − Using PDFBox, you can save PDFs as image files, such as PNG or JPEG.
+
+Create PDFs − Using PDFBox, you can create a new PDF file by creating Java programs and, you can also include images and fonts.
+
+Signing− Using PDFBox, you can add digital signatures to the PDF files
+
+**************************
+https://www.tutorialspoint.com/pdfbox
+***************************
+
+

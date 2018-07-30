@@ -11,6 +11,7 @@ import org.apache.pdfbox.io.RandomAccessBuffer;
 import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Demo {
+public class PDF_READ {
 	
 WebDriver driver;
 	
@@ -67,6 +68,30 @@ WebDriver driver;
 		Thread.sleep(2000);
 		Assert.assertTrue(getURL.contains(".pdf"));
 	}
+	
+	/**
+	 * read pdf text
+	 * @throws InterruptedException 
+	 * @throws IOException 
+	 * @throws InvalidPasswordException 
+	 */
+	@Test
+	public void readPdf() throws InterruptedException, InvalidPasswordException, IOException {
+		 //Loading an existing document
+	      File file = new File("/Users/sarthakgarg/Downloads/my_doc1.pdf");
+	      PDDocument document = PDDocument.load(file);
+
+	      //Instantiate PDFTextStripper class
+	      PDFTextStripper pdfStripper = new PDFTextStripper();
+
+	      //Retrieving text from PDF document
+	      String text = pdfStripper.getText(document);
+	      System.out.println(text);
+
+	      //Closing the document
+	      document.close();
+	}
+	
 	
 	
 
